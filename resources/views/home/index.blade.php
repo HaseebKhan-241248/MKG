@@ -5,7 +5,7 @@
 
 {{-- Content Header (Page header) --}}
 <section class="content-header content-header-custom">
-    <h1>{{ __('home.welcome_message', ['name' => Session::get('user.first_name')]) }}
+    <h1 class="text-primary">{{ __('home.welcome_message', ['name' => Session::get('user.first_name')]) }}
     </h1>
 </section>
 {{-- Main content --}}
@@ -26,7 +26,7 @@
         				data-end="{{ date('Y-m-d') }}"
         				checked> {{ __('home.today') }}
       				</label>  
-              
+
       				<label class="btn btn-info">
         				<input type="radio" name="date-filter"
         				data-start="{{ $date_filters['this_week']['start']}}" 
