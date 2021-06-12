@@ -133,9 +133,7 @@
                   echo $time;
                 @endphp</strong>
         </div>
-        <div class="m-8 pull-left mt-15 hidden-xs customAdminis" >
-            <strong>ADMINISTRATOR</strong>
-        </div>
+       
         
 
         <ul class="nav navbar-nav">
@@ -180,4 +178,6 @@
         </ul>
       </div>
     </nav>
+    
   </header>
+  <hr style="border: 1px solid #1572e8;margin-top:0px;">

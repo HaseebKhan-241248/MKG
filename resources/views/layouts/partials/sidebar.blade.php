@@ -1,8 +1,8 @@
 <!-- Left side column. contains the logo and sidebar -->
-<aside class="main-sidebar">
+<aside class="main-sidebar" style="background: #1572e8 !important;">
 
   <!-- sidebar: style can be found in sidebar.less -->
-  <section class="sidebar" style="background-color:;">
+  <section class="sidebar" >
 
 	<a href="{{route('home')}}" class="logo">
 		<span class="logo-lg">{{ Session::get('business.name') }}</span>

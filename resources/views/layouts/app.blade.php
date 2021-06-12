@@ -30,6 +30,18 @@
         @include('layouts.partials.css')
 
         @yield('css')
+        <style>
+            .skin-blue-light .sidebar-menu>li.active>a, .skin-blue-light .sidebar-menu>li:hover>a {
+                background: #8ec0ff !important;
+                color: white;
+            }
+            .skin-blue-light .sidebar-menu .treeview-menu>li.active>a, .skin-blue-light .sidebar-menu .treeview-menu>li>a:hover {
+                color: #8ec0ff !important;
+            }
+            .skin-blue-light .sidebar-menu>li>a {
+                color: white ;
+            }
+        </style>
     </head>
 
     <body class="@if($pos_layout) hold-transition lockscreen @else hold-transition skin-@if(!empty(session('business.theme_color'))){{session('business.theme_color')}}@else{{'blue-light'}}@endif sidebar-mini @endif">
