@@ -44,6 +44,7 @@
             .skin-blue .content-wrapper .content-header-custom a, .skin-blue .content-wrapper .content-header-custom h1, .skin-blue .content-wrapper .content-header-custom small, .skin-blue-light .content-wrapper .content-header-custom a, .skin-blue-light .content-wrapper .content-header-custom h1, .skin-blue-light .content-wrapper .content-header-custom small {
                 color: #1572e8 !important;
             }
+            
         </style>
     </head>
 
