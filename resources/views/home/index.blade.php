@@ -25,7 +25,8 @@
         				data-start="{{ date('Y-m-d') }}" 
         				data-end="{{ date('Y-m-d') }}"
         				checked> {{ __('home.today') }}
-      				</label>
+      				</label>  
+              
       				<label class="btn btn-info">
         				<input type="radio" name="date-filter"
         				data-start="{{ $date_filters['this_week']['start']}}" 
