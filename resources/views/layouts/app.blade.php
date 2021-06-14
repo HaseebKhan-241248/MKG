@@ -41,10 +41,24 @@
             .skin-blue-light .sidebar-menu>li>a {
                 color: white ;
             }
-            .skin-blue .content-wrapper .content-header-custom a, .skin-blue .content-wrapper .content-header-custom h1, .skin-blue .content-wrapper .content-header-custom small, .skin-blue-light .content-wrapper .content-header-custom a, .skin-blue-light .content-wrapper .content-header-custom h1, .skin-blue-light .content-wrapper .content-header-custom small {
-                color: #1572e8 !important;
+           
+            .customBackground {
+                background-color: #5296ec !important;
+            }
+            .customBackgroundDark {
+                background-color: #1572e8 !important;
+            }
+            .customBackgroundDark:hover {
+                background-color: #8ec0ff !important;
+            }
+            .customBackground:hover {
+                background-color: #8ec0ff !important;
             }
             
+            
+                
+            
+
         </style>
     </head>
 

@@ -5,7 +5,7 @@
 
 {{-- Content Header (Page header) --}}
 <section class="content-header content-header-custom">
-    <h1 class="text-primary">{{ __('home.welcome_message', ['name' => Session::get('user.first_name')]) }}
+    <h1 class=" " style="color: #1572e8 !important;">{{ __('home.welcome_message', ['name' => Session::get('user.first_name')]) }}
     </h1>
 </section>
 {{-- Main content --}}
@@ -20,26 +20,26 @@
             </div>
     		<div class="col-md-8 col-xs-12">
     			<div class="btn-group pull-right" data-toggle="buttons">
-    				<label class="btn btn-info active">
+    				<label class="btn btn-info customBackgroundDark active ">
         				<input type="radio" name="date-filter"
         				data-start="{{ date('Y-m-d') }}" 
         				data-end="{{ date('Y-m-d') }}"
         				checked> {{ __('home.today') }}
       				</label>  
 
-      				<label class="btn btn-info">
+      				<label class="btn btn-info customBackgroundDark">
         				<input type="radio" name="date-filter"
         				data-start="{{ $date_filters['this_week']['start']}}" 
         				data-end="{{ $date_filters['this_week']['end']}}"
         				> {{ __('home.this_week') }}
       				</label>
-      				<label class="btn btn-info">
+      				<label class="btn btn-info customBackgroundDark">
         				<input type="radio" name="date-filter"
         				data-start="{{ $date_filters['this_month']['start']}}" 
         				data-end="{{ $date_filters['this_month']['end']}}"
         				> {{ __('home.this_month') }}
       				</label>
-      				<label class="btn btn-info">
+      				<label class="btn btn-info customBackgroundDark">
         				<input type="radio" name="date-filter" 
         				data-start="{{ $date_filters['this_fy']['start']}}" 
         				data-end="{{ $date_filters['this_fy']['end']}}" 
@@ -52,7 +52,7 @@
     	<div class="row row-custom">
         	<div class="col-md-3 col-sm-6 col-xs-12 col-custom">
     	      <div class="info-box info-box-new-style">
-    	        <span class="info-box-icon bg-aqua"><i class="ion ion-cash"></i></span>
+    	        <span class="info-box-icon bg-aqua customBackground"><i class="ion ion-cash"></i></span>
 
     	        <div class="info-box-content">
     	          <span class="info-box-text">{{ __('home.total_purchase') }}</span>
@@ -65,7 +65,7 @@
     	    {{-- /.col --}}
     	    <div class="col-md-3 col-sm-6 col-xs-12 col-custom">
     	      <div class="info-box info-box-new-style">
-    	        <span class="info-box-icon bg-aqua"><i class="ion ion-ios-cart-outline"></i></span>
+    	        <span class="info-box-icon bg-aqua customBackground"><i class="ion ion-ios-cart-outline"></i></span>
 
     	        <div class="info-box-content">
     	          <span class="info-box-text">{{ __('home.total_sell') }}</span>
@@ -78,7 +78,7 @@
     	    {{-- /.col --}}
     	    <div class="col-md-3 col-sm-6 col-xs-12 col-custom">
     	      <div class="info-box info-box-new-style">
-    	        <span class="info-box-icon bg-yellow">
+    	        <span class="info-box-icon bg-yellow customBackground">
     	        	<i class="fa fa-dollar"></i>
     				<i class="fa fa-exclamation"></i>
     	        </span>
@@ -97,7 +97,7 @@
     	    {{-- <div class="clearfix visible-sm-block"></div> --}}
     	    <div class="col-md-3 col-sm-6 col-xs-12 col-custom">
     	      <div class="info-box info-box-new-style">
-    	        <span class="info-box-icon bg-yellow">
+    	        <span class="info-box-icon bg-yellow customBackground">
     	        	<i class="ion ion-ios-paper-outline"></i>
     	        	<i class="fa fa-exclamation"></i>
     	        </span>
@@ -116,7 +116,7 @@
             {{-- expense --}}
             <div class="col-md-3 col-sm-6 col-xs-12 col-custom">
               <div class="info-box info-box-new-style">
-                <span class="info-box-icon bg-red">
+                <span class="info-box-icon bg-red customBackground">
                   <i class="fas fa-minus-circle"></i>
                 </span>
 
