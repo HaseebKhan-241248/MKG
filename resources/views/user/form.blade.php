@@ -88,11 +88,11 @@
     {!! Form::label('current_address', __( 'lang_v1.current_address') . ':') !!}
     {!! Form::textarea('current_address', !empty($user->current_address) ? $user->current_address : null, ['class' => 'form-control', 'placeholder' => __( 'lang_v1.current_address'), 'rows' => 3 ]); !!}
 </div>
-<div class="col-md-12">
+{{-- <div class="col-md-12">
     <hr>
     <h4>@lang('lang_v1.bank_details'):</h4>
-</div>
-<div class="form-group col-md-3">
+</div> --}}
+{{-- <div class="form-group col-md-3">
     {!! Form::label('account_holder_name', __( 'lang_v1.account_holder_name') . ':') !!}
     {!! Form::text('bank_details[account_holder_name]', !empty($bank_details['account_holder_name']) ? $bank_details['account_holder_name'] : null , ['class' => 'form-control', 'id' => 'account_holder_name', 'placeholder' => __( 'lang_v1.account_holder_name') ]); !!}
 </div>
@@ -116,4 +116,4 @@
     {!! Form::label('tax_payer_id', __( 'lang_v1.tax_payer_id') . ':') !!}
     @show_tooltip(__('lang_v1.tax_payer_id_help'))
     {!! Form::text('bank_details[tax_payer_id]', !empty($bank_details['tax_payer_id']) ? $bank_details['tax_payer_id'] : null, ['class' => 'form-control', 'id' => 'tax_payer_id', 'placeholder' => __( 'lang_v1.tax_payer_id') ]); !!}
-</div>
+</div> --}}

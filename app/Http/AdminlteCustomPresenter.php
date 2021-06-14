@@ -48,6 +48,7 @@ class AdminlteCustomPresenter extends Presenter
      */
     public function getActiveStateOnChild($item, $state = 'active')
     {
+        // dd($item);
         return $item->hasActiveOnChild() ? $state : null;
     }
 
@@ -72,6 +73,7 @@ class AdminlteCustomPresenter extends Presenter
      */
     public function getMenuWithDropDownWrapper($item)
     {
+        
         return '<li class="treeview' . $this->getActiveStateOnChild($item, ' active') . '" ' . $item->getAttributes() . '>
 		          <a href="#" style="    color: white !important;">
 					' . $item->getIcon() . ' <span>' . $item->title . '</span>
@@ -95,6 +97,7 @@ class AdminlteCustomPresenter extends Presenter
      */
     public function getMultiLevelDropdownWrapper($item)
     {
+        
         return '<li class="treeview' . $this->getActiveStateOnChild($item, ' active') . '">
 		          <a href="#">
 					' . $item->getIcon() . ' <span>' . $item->title . '</span>

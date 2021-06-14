@@ -14,56 +14,7 @@
 
 <!-- Main content -->
 <section class="content">
-{!! Form::open(['url' => action('UserController@updatePassword'), 'method' => 'post', 'id' => 'edit_password_form',
-            'class' => 'form-horizontal' ]) !!}
-<div class="row">
-    <div class="col-sm-12">
-        <div class="box box-solid"> <!--business info box start-->
-            <div class="box-header">
-                <div class="box-header">
-                    <h3 class="box-title"> @lang('user.change_password')</h3>
-                </div>
-            </div>
-            <div class="box-body">
-                <div class="form-group">
-                    {!! Form::label('current_password', __('user.current_password') . ':', ['class' => 'col-sm-3 control-label']) !!}
-                    <div class="col-sm-9">
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                <i class="fa fa-lock"></i>
-                            </span>
-                            {!! Form::password('current_password', ['class' => 'form-control','placeholder' => __('user.current_password'), 'required']); !!}
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    {!! Form::label('new_password', __('user.new_password') . ':', ['class' => 'col-sm-3 control-label']) !!}
-                    <div class="col-sm-9">
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                <i class="fa fa-lock"></i>
-                            </span>
-                            {!! Form::password('new_password', ['class' => 'form-control','placeholder' => __('user.new_password'), 'required']); !!}
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    {!! Form::label('confirm_password', __('user.confirm_new_password') . ':', ['class' => 'col-sm-3 control-label']) !!}
-                    <div class="col-sm-9">
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                <i class="fa fa-lock"></i>
-                            </span>
-                            {!! Form::password('confirm_password', ['class' => 'form-control','placeholder' =>  __('user.confirm_new_password'), 'required']); !!}
-                        </div>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-primary pull-right">@lang('messages.update')</button>
-            </div>
-        </div>
-    </div>
-</div>
-{!! Form::close() !!}
+
 {!! Form::open(['url' => action('UserController@updateProfile'), 'method' => 'post', 'id' => 'edit_user_profile_form', 'files' => true ]) !!}
 <div class="row">
     <div class="col-sm-8">
@@ -139,6 +90,56 @@
         @endcomponent
     </div>
 </div>
+{!! Form::open(['url' => action('UserController@updatePassword'), 'method' => 'post', 'id' => 'edit_password_form',
+            'class' => 'form-horizontal' ]) !!}
+<div class="row">
+    <div class="col-sm-12">
+        <div class="box box-solid"> <!--business info box start-->
+            <div class="box-header">
+                <div class="box-header">
+                    <h3 class="box-title"> @lang('user.change_password')</h3>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="form-group">
+                    {!! Form::label('current_password', __('user.current_password') . ':', ['class' => 'col-sm-3 control-label']) !!}
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-lock"></i>
+                            </span>
+                            {!! Form::password('current_password', ['class' => 'form-control','placeholder' => __('user.current_password'), 'required']); !!}
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    {!! Form::label('new_password', __('user.new_password') . ':', ['class' => 'col-sm-3 control-label']) !!}
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-lock"></i>
+                            </span>
+                            {!! Form::password('new_password', ['class' => 'form-control','placeholder' => __('user.new_password'), 'required']); !!}
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    {!! Form::label('confirm_password', __('user.confirm_new_password') . ':', ['class' => 'col-sm-3 control-label']) !!}
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-lock"></i>
+                            </span>
+                            {!! Form::password('confirm_password', ['class' => 'form-control','placeholder' =>  __('user.confirm_new_password'), 'required']); !!}
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary pull-right">@lang('messages.update')</button>
+            </div>
+        </div>
+    </div>
+</div>
+{!! Form::close() !!}
 @include('user.edit_profile_form_part', ['bank_details' => !empty($user->bank_details) ? json_decode($user->bank_details, true) : null])
 <div class="row">
     <div class="col-md-12">
