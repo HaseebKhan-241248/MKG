@@ -31,6 +31,165 @@ class AdminSidebarMenu
             //Home
             $menu->url(action('HomeController@index'), __('home.home'), ['icon' => 'fa fas fa-tachometer-alt', 'active' => request()->segment(1) == 'home'])->order(5);
 
+
+
+          //////////////////////////////// general tab ///////////////////////////////////////
+          
+              $menu->dropdown(
+                  __('General'),
+                  function ($sub) use ($common_settings) {
+                      
+                          $sub->url(
+                              '#',
+                              __('Group Information'),
+                              ['icon' => 'fa fas fa-list', ]
+                          );
+                      
+                     
+                      
+                          $sub->url(
+                              '#',
+                              __('Category Information'),
+                              ['icon' => 'fa fas fa-plus-list',]
+                          );
+
+                          $sub->url(
+                              '#',
+                              __('Sub Category Information'),
+                              ['icon' => 'fa fas fa-plus-circle', ]
+                          );
+
+                          $sub->url(
+                              '#',
+                              __('Unit Categories'),
+                              ['icon' => 'fa fas fa-plus-circle', ]
+                          );
+                          $sub->url(
+                              '#',
+                              __('Unit Information'),
+                              ['icon' => 'fa fas fa-plus-circle', ]
+                          );
+                          $sub->url(
+                              '#',
+                              __('Author Information'),
+                              ['icon' => 'fa fas fa-plus-circle', ]
+                          );
+                          $sub->url(
+                            '#',
+                            __('Series Information'),
+                            ['icon' => 'fa fas fa-plus-circle',]
+                        );
+                        $sub->url(
+                            '#',
+                            __('Publisher Information'),
+                            ['icon' => 'fa fas fa-plus-circle', ]
+                        );
+                        $sub->url(
+                            '#',
+                            __('Topic Information'),
+                            ['icon' => 'fa fas fa-plus-circle',]
+                        );
+                        $sub->url(
+                            '#',
+                            __('Topic Wise Slab Discount'),
+                            ['icon' => 'fa fas fa-plus-circle', ]
+                        );
+                        $sub->url(
+                            '#',
+                            __('Class Information'),
+                            ['icon' => 'fa fas fa-plus-circle', ]
+                        );
+                        $sub->url(
+                            '#',
+                            __('Language Information'),
+                            ['icon' => 'fa fas fa-plus-circle', ]
+                        );
+                        $sub->url(
+                            '#',
+                            __('Currency Information'),
+                            ['icon' => 'fa fas fa-plus-circle', ]
+                        );
+                        $sub->url(
+                            '#',
+                            __('Credit Card Information'),
+                            ['icon' => 'fa fas fa-plus-circle', ]
+                        );
+                        $sub->url(
+                            '#',
+                            __('Product Location'),
+                            ['icon' => 'fa fas fa-plus-circle', ]
+                        );
+                        $sub->url(
+                            '#',
+                            __('Product Information'),
+                            ['icon' => 'fa fas fa-plus-circle',]
+                        );
+                        // $sub->url(
+                        //     action('PurchaseController@create'),
+                        //     __('Additional Product Code'),
+                        //     ['icon' => 'fa fas fa-plus-circle', 'active' => request()->segment(1) == 'purchases' && request()->segment(17) == 'create']
+                        // );
+                        // $sub->url(
+                        //     action('PurchaseController@create'),
+                        //     __('Product Pin Location'),
+                        //     ['icon' => 'fa fas fa-plus-circle', 'active' => request()->segment(1) == 'purchases' && request()->segment(18) == 'create']
+                        // );
+                        // $sub->url(
+                        //     action('PurchaseController@create'),
+                        //     __('Bulk Barcode Printing'),
+                        //     ['icon' => 'fa fas fa-plus-circle', 'active' => request()->segment(1) == 'purchases' && request()->segment(19) == 'create']
+                        // );
+                        // $sub->url(
+                        //     action('PurchaseController@create'),
+                        //     __('Package Information'),
+                        //     ['icon' => 'fa fas fa-plus-circle', 'active' => request()->segment(1) == 'purchases' && request()->segment(20) == 'create']
+                        // );
+                        // $sub->url(
+                        //     action('PurchaseController@create'),
+                        //     __('Transporter Information'),
+                        //     ['icon' => 'fa fas fa-plus-circle', 'active' => request()->segment(1) == 'purchases' && request()->segment(21) == 'create']
+                        // );
+                        // $sub->url(
+                        //     action('PurchaseController@create'),
+                        //     __('Party Nature Information'),
+                        //     ['icon' => 'fa fas fa-plus-circle', 'active' => request()->segment(1) == 'purchases' && request()->segment(22) == 'create']
+                        // );
+                        // $sub->url(
+                        //     action('PurchaseController@create'),
+                        //     __('Parties Information'),
+                        //     ['icon' => 'fa fas fa-plus-circle', 'active' => request()->segment(1) == 'purchases' && request()->segment(23) == 'create']
+                        // );
+                        // $sub->url(
+                        //     action('PurchaseController@create'),
+                        //     __('Party Payment Receipt Resource'),
+                        //     ['icon' => 'fa fas fa-plus-circle', 'active' => request()->segment(1) == 'purchases' && request()->segment(24) == 'create']
+                        // );
+                        // $sub->url(
+                        //     action('PurchaseController@create'),
+                        //     __('Stock Flow Sources'),
+                        //     ['icon' => 'fa fas fa-plus-circle', 'active' => request()->segment(25) == 'purchases' && request()->segment(25) == 'create']
+                        // );
+                        // $sub->url(
+                        //     action('PurchaseController@create'),
+                        //     __('Denomination Information'),
+                        //     ['icon' => 'fa fas fa-plus-circle', 'active' => request()->segment(26) == 'purchases' && request()->segment(26) == 'create']
+                        // );
+                        // $sub->url(
+                        //     action('PurchaseController@create'),
+                        //     __('Scholl Information'),
+                        //     ['icon' => 'fa fas fa-plus-circle', 'active' => request()->segment(27) == 'purchases' && request()->segment(27) == 'create']
+                        // );
+                        // $sub->url(
+                        //     action('PurchaseController@create'),
+                        //     __('Sales Bill Slab Amount Discount'),
+                        //     ['icon' => 'fa fas fa-plus-circle', 'active' => request()->segment(28) == 'purchases' && request()->segment(28) == 'create']
+                        // );
+                  },
+                  ['icon' => 'fa fas fa-arrow-circle-down', 'id' => 'tour_step6']
+              )->order(10);
+          
+
+
             //User management dropdown
             // if (auth()->user()->can('user.view') || auth()->user()->can('user.create') || auth()->user()->can('roles.view')) {
             //     $menu->dropdown(
@@ -194,7 +353,8 @@ class AdminSidebarMenu
             }
 
             //Purchase dropdown
-            if (in_array('purchases', $enabled_modules) && (auth()->user()->can('purchase.view') || auth()->user()->can('purchase.create') || auth()->user()->can('purchase.update'))) {
+            if (in_array('purchases', $enabled_modules) && (auth()->user()->can('purchase.view') || auth()->user()->can('purchase.create') || auth()->user()->can('purchase.update'))) 
+            {
                 $menu->dropdown(
                     __('purchase.purchases'),
                     function ($sub) use ($common_settings) {

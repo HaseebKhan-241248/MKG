@@ -126,16 +126,11 @@
             <strong>{{ \Carbon\Carbon::parse(date(''))->format('d-M-Y') }}</strong>
         </div>
         <div class="m-8 pull-left mt-15 hidden-xs customTime" >
-            <strong>
-                @php 
-                  date_default_timezone_set("Asia/Karachi");
-                  $time = date("h:i-a");
-                  echo $time;
-                @endphp</strong>
+            <strong id="span"></strong>
         </div>
-        <div class="m-8 pull-left mt-15 hidden-xs customAdminis" >
+        {{-- <div class="m-8 pull-left mt-15 hidden-xs customAdminis" >
             <strong>ADMINISTRATOR</strong>
-        </div>
+        </div> --}}
         
 
         <ul class="nav navbar-nav">

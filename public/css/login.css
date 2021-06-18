@@ -285,7 +285,7 @@ section {
   color: #fff;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  margin-top: -44px;
+  /* margin-top: -44px; */
   pointer-events: none;
 }
 
