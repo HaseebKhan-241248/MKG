@@ -42,7 +42,7 @@ class BrandController extends Controller
 
             $brands = Brands::where('business_id', $business_id)
                         ->select(['name', 'description', 'id']);
-
+// dd($brands);
             return Datatables::of($brands)
                 ->addColumn(
                     'action',

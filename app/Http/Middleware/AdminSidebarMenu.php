@@ -39,8 +39,8 @@ class AdminSidebarMenu
                   __('General'),
                   function ($sub) use ($common_settings) {
                       
-                          $sub->url(
-                              '#',
+                          $sub->url(                                                        
+                            action('General\GeneralController@list'),                              
                               __('Group Information'),
                               ['icon' => 'fa fas fa-list', ]
                           );

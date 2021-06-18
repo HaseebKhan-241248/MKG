@@ -33,6 +33,12 @@ Route::middleware(['setData'])->group(function () {
 
 //Routes for authenticated users only
 Route::middleware(['setData', 'auth', 'SetSessionData', 'language', 'timezone', 'AdminSidebarMenu', 'CheckUserLogin'])->group(function () {
+    Route::get('/group-list','General\GeneralController@list')->name('groups.list');
+    Route::get('/create-group','General\GeneralController@create')->name('group.create');
+    Route::post('/store-group','General\GeneralController@store')->name('group.store');
+
+    Route::get('/delete-group/{id}','General\GeneralController@destroy_group')->name('delete.group');
+
     Route::get('/home', 'HomeController@index')->name('home');
     Route::get('/home/get-totals', 'HomeController@getTotals');
     Route::get('/home/product-stock-alert', 'HomeController@getProductStockAlert');
